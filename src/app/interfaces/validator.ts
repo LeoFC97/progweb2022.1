@@ -1,5 +1,5 @@
 interface Validator {
-  validate<T>(data: unknown): Promise<T>;
+  validate<TypeToValidate>(data: unknown): Promise<TypeToValidate>;
 }
 
 export default Validator;
