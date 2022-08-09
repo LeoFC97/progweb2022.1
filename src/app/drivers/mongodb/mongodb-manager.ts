@@ -12,7 +12,7 @@ export default class MongoDBManager {
     mongoose.connect(uri, options)
       .then(() => console.info('Connected to MongoDB'))
       .catch(({ message }) => {
-        console .error(
+        console.error(
           { mongodb: { error: { message } } },
           'Failed to initialize MongoDB connection',
         );
