@@ -1,10 +1,10 @@
 import { container } from 'tsyringe';
 
-import FoodJokeDBRepository from './drivers/mongoDb/grade/grade.mongodb.repository';
+import CourseMongoDBRepository from './drivers/mongoDb/course/course.mongodb.repository';
 import JoiSchemaValidator from './validators/joi-schema-validator';
 
-container.register('FoodJokeRepository', {
-  useClass: FoodJokeDBRepository,
+container.register('CourseRepository', {
+  useClass: CourseMongoDBRepository,
 });
 
 container.register('SchemaValidator', {
