@@ -6,7 +6,7 @@ import { CreateCourseBodyData } from '../../../interfaces/entities/course/course
 import CreateCourseValidator from '../../../validators/create-course.validator';
 
 @injectable()
-class GetRandomFoodJokeController implements Controller {
+class CreateCourseController implements Controller {
   constructor(
     private createCourseUseCase: CreateCourseUseCase,
     private createFoodJokeValidator: CreateCourseValidator,
@@ -24,4 +24,4 @@ class GetRandomFoodJokeController implements Controller {
   }
 }
 
-export default GetRandomFoodJokeController;
+export default CreateCourseController;
