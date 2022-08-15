@@ -11,7 +11,7 @@ const startExpressServer = () => {
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  app.use('/', routes);
+  app.use('/api', routes);
 
   app.use(adapt(container.resolve(PathNotFoundMiddleware)));
   app.use(handleDomainErrors);
