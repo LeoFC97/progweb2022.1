@@ -1,4 +1,4 @@
-import { inject, injectable } from 'tsyringe';
+import { injectable } from 'tsyringe';
 import Controller from '../../../../interfaces/http/controller';
 import { HttpResponse, HttpRequest } from '../../../../interfaces/http/http';
 import CreateCourseUseCase from '../../../../use-cases/create-course.usecase';
