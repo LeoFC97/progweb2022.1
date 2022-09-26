@@ -2,7 +2,7 @@ import { injectable } from 'tsyringe';
 import { CreateSubjectBodyData } from '../../../../interfaces/entities/subject/subject';
 import Controller from '../../../../interfaces/http/controller';
 import { HttpRequest, HttpResponse } from '../../../../interfaces/http/http';
-import CreateSubjectUseCase from '../../../../use-cases/subjetcs/create-subject.usecase';
+import CreateSubjectUseCase from '../../../../use-cases/subjetc/create-subject.usecase';
 import CreateSubjectValidator from '../../../../validators/create-subject-validator';
 
 @injectable()

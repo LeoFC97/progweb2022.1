@@ -2,9 +2,11 @@ import { ObjectId } from 'mongodb';
 
 export interface Subject {
   _id: ObjectId,
-  title: string,
+  name: string,
+  createdAt: Date,
+  updatedAt: Date
 }
 
 export interface CreateSubjectBodyData {
-  title: string,
+  name: string,
 }

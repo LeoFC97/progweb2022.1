@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
-import { Course } from '../interfaces/entities/course/course';
-import UseCase from '../interfaces/use-case';
-import CourseRepository from '../interfaces/entities/course/course.repository';
+import { Course } from '../../interfaces/entities/course/course';
+import UseCase from '../../interfaces/use-case';
+import CourseRepository from '../../interfaces/entities/course/course.repository';
 
 @injectable()
 class GetAllCoursesUseCase implements UseCase {

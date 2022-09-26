@@ -3,7 +3,6 @@ import {
   Model,
   model,
 } from 'mongoose';
-import Grade, { CreateGradeBodyData } from '../../../interfaces/entities/grade/grade';
 import { CreateSubjectBodyData, Subject } from '../../../interfaces/entities/subject/subject';
 import SubjectRepository from '../../../interfaces/entities/subject/subject.repository';
 import SubjectSchema from './subject.schema';
@@ -15,14 +14,18 @@ class SubjectMongoDBRepository implements SubjectRepository {
   constructor() {
     this.model = model<SubjectDoc>('Subject', SubjectSchema);
   }
-  getAll(): Promise<Subject[]> {
-    throw new Error('Method not implemented.');
+  async getAll(): Promise<Subject[]> {
+    return this.model.find();
   }
   getById(subjectId: string): Promise<Subject> {
     throw new Error('Method not implemented.');
   }
   async create(subjectToBeCreated: CreateSubjectBodyData): Promise<Subject> {
-    const subjectCreated = await this.model.create(subjectToBeCreated);
+    console.log(subjectToBeCreated);
+    const subjectCreated = await this.model.create({
+      name: subjectToBeCreated.name,
+    });
+    console.log(subjectCreated);
     return subjectCreated;
   }
 }

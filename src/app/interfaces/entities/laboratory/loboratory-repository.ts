@@ -1,7 +1,6 @@
-import FoodJoke from './foodJoke';
+import Laboratory from './loboratory';
 
 export default interface FoodJokeRepository {
-  getRandom(): Promise<FoodJoke>;
-  create(textJoke: string): Promise<FoodJoke>;
-  getById(jokeId: string): Promise<FoodJoke>;
+  create(laboratoryToBeCreated: Laboratory): Promise<Laboratory>;
+  getById(laboratoryId: string): Promise<Laboratory>;
 }

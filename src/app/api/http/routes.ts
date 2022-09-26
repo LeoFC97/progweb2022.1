@@ -18,5 +18,4 @@ router.get('/courses', adapt(container.resolve(GetAllCoursesController)));
 router.get('/subjects', adapt(container.resolve(GetAllSubjectsController)));
 router.post('/subject', adapt(container.resolve(CreateSubjectController)));
 
-
 export default router;

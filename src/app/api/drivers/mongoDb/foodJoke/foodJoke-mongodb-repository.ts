@@ -3,10 +3,10 @@ import {
   Model,
   model,
 } from 'mongoose';
-import EntityNotFoundError from '../../../errors/entity-not-found';
-import FoodJokeRepository from '../../../interfaces/entities/foodJoke/foodJoke-repository';
+import EntityNotFoundError from '../../../../errors/entity-not-found';
+import FoodJokeRepository from '../../../../interfaces/entities/foodJoke/foodJoke-repository';
 import FoodJokeSchema from './foodJoke-schema';
-import FoodJoke from '../../../interfaces/entities/foodJoke/foodJoke';
+import FoodJoke from '../../../../interfaces/entities/foodJoke/foodJoke';
 
 type FoodJokeDoc = Document & FoodJoke;
 class FoodJokeMongoDBRepository implements FoodJokeRepository {
