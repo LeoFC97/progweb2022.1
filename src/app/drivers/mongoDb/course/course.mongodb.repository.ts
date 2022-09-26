@@ -17,6 +17,9 @@ class CourseMongoDBRepository implements CourseRepository {
   async create(title: string): Promise<Course> {
     return this.model.create({ title });
   }
+  async getAll(): Promise<Course[]> {
+    return this.model.find();
+  }
 }
 
 export default CourseMongoDBRepository;

@@ -1,4 +1,5 @@
 import { Schema } from 'mongoose';
+import SubjectSchema from '../subject/subject.schema';
 
 const GradeSchema = new Schema(
   {
@@ -13,6 +14,10 @@ const GradeSchema = new Schema(
       required: true,
       index: true,
       example: '8',
+    },
+    subjects: {
+      type: Array,
+      required: SubjectSchema,
     },
   },
   {

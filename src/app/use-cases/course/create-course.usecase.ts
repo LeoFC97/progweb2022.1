@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
-import { Course, CreateCourseBodyData } from '../interfaces/entities/course/course';
-import UseCase from '../interfaces/use-case';
-import CourseRepository from '../interfaces/entities/course/course.repository';
+import { Course, CreateCourseBodyData } from '../../interfaces/entities/course/course';
+import UseCase from '../../interfaces/use-case';
+import CourseRepository from '../../interfaces/entities/course/course.repository';
 
 @injectable()
 class CreateCourseUseCase implements UseCase {
@@ -11,8 +11,8 @@ class CreateCourseUseCase implements UseCase {
 
   async execute(data: CreateCourseBodyData): Promise<Course> {
     const { title } = data;
-    const joke = await this.courseRepository.create(title);
-    return joke;
+    const courseCreated = await this.courseRepository.create(title);
+    return courseCreated;
   }
 }
 export default CreateCourseUseCase;

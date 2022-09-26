@@ -10,5 +10,7 @@ export default interface Grade {
 }
 
 export interface CreateGradeBodyData {
-  joke: string,
+  title: string,
+  description: string,
+  period: string,
 }
