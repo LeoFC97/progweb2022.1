@@ -1,7 +1,7 @@
 import { injectable } from 'tsyringe';
 import Controller from '../../../../interfaces/http/controller';
 import { HttpResponse } from '../../../../interfaces/http/http';
-import GetAllCoursesUseCase from '../../../../use-cases/getall-course.usecase';
+import GetAllCoursesUseCase from '../../../../use-cases/course/getall-course.usecase';
 
 @injectable()
 class GetAllCourseController implements Controller {
