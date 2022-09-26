@@ -3,7 +3,7 @@ import { CreateSubjectBodyData } from '../../../../interfaces/entities/subject/s
 import Controller from '../../../../interfaces/http/controller';
 import { HttpRequest, HttpResponse } from '../../../../interfaces/http/http';
 import CreateSubjectUseCase from '../../../../use-cases/subjetc/create-subject.usecase';
-import CreateSubjectValidator from '../../../../validators/create-subject-validator';
+import CreateSubjectValidator from '../../../../validators/subject/create-subject-validator';
 
 @injectable()
 class CreateSubjectController implements Controller {

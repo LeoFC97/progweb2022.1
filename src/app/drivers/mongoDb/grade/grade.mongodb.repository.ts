@@ -14,6 +14,9 @@ class GradeMongoDBRepository implements GradeRepository {
   constructor() {
     this.model = model<GradeDoc>('Grade', GradeSchema);
   }
+  getByCourseName(courseName: string, coursePeriod: string): Promise<Grade> {
+    throw new Error('Method not implemented.');
+  }
   getById(gradeId: string): Promise<Grade> {
     throw new Error('Method not implemented.');
   }

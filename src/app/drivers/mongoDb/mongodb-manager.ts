@@ -2,7 +2,7 @@ import mongoose, { Connection } from 'mongoose';
 
 export default class MongoDBManager {
   static initialize(uri: string): void {
-    console.log(uri)
+    console.log(uri);
     const options = {
       useCreateIndex: true,
       useNewUrlParser: true,
