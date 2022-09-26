@@ -1,8 +1,8 @@
 /* eslint-disable complexity */
 import { Response, NextFunction } from 'express';
-import BaseHttpError from '../../api/http/errors/base';
-import { RequestExpress } from '../../interfaces/http/express';
-import { service } from '../../../config/enviroment';
+import BaseHttpError from '../../http/errors/base-http';
+import { RequestExpress } from '../../../interfaces/http/express';
+import { service } from '../../../../config/enviroment';
 
 class ErrorHandlerExpress {
   // eslint-disable-next-line max-len

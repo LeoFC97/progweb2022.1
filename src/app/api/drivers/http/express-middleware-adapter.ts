@@ -1,5 +1,5 @@
 import { Response, NextFunction } from 'express';
-import Middleware, { RequestExpress } from '../../interfaces/http/express';
+import Middleware, { RequestExpress } from '../../../interfaces/http/express';
 
 class ExpressMiddlewareAdapter {
   static adapt(middleware: Middleware) {

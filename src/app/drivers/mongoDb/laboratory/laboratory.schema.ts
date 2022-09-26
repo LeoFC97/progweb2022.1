@@ -3,12 +3,12 @@ import { Schema } from 'mongoose';
 const LaboratorySchema = new Schema(
   {
     name: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     roomCapacity: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
   },
   {

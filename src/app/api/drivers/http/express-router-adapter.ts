@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express';
-import { HttpRequest } from '../../interfaces/http/http';
-import Controller from '../../interfaces/http/controller';
-import { RequestExpress } from '../../interfaces/http/express';
+import { HttpRequest } from '../../../interfaces/http/http';
+import Controller from '../../../interfaces/http/controller';
+import { RequestExpress } from '../../../interfaces/http/express';
 
 class ExpressRouterAdapter {
   static adapt(controller: Controller) {

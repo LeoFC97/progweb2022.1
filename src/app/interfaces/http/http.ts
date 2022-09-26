@@ -20,4 +20,4 @@ interface HttpRequestUser {
   name: string;
 }
 
-export { HttpRequest, HttpResponse };
+export { HttpRequest, HttpResponse, HttpRequestUser };
