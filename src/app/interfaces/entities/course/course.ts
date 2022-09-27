@@ -10,3 +10,8 @@ export interface Course {
 export interface CreateCourseBodyData {
   title: string,
 }
+
+export interface GetGradeByNameAndPeriodData {
+  courseName: string,
+  coursePeriod: string,
+}

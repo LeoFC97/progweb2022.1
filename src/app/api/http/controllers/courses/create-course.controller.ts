@@ -3,7 +3,7 @@ import Controller from '../../../../interfaces/http/controller';
 import { HttpResponse, HttpRequest } from '../../../../interfaces/http/http';
 import { CreateCourseBodyData } from '../../../../interfaces/entities/course/course';
 import CreateCourseValidator from '../../../../validators/course/create-course.validator';
-import CreateCourseUseCaseInterface from '../../../../interfaces/use-cases/create-course.interface';
+import CreateCourseUseCaseInterface from '../../../../interfaces/use-cases/course/create-course.interface';
 
 @injectable()
 class CreateCourseController implements Controller {

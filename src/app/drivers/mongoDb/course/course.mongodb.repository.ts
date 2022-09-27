@@ -5,10 +5,10 @@ import {
 } from 'mongoose';
 import CourseSchema from './course.schema';
 import { Course } from '../../../interfaces/entities/course/course';
-import CourseRepository from '../../../interfaces/entities/course/course.repository';
+import CourseRepositoryInterface from '../../../interfaces/entities/course/course.repository';
 
 type CourseDoc = Course & Document;
-class CourseMongoDBRepository implements CourseRepository {
+class CourseMongoDBRepository implements CourseRepositoryInterface {
   private model: Model<CourseDoc>;
 
   constructor() {

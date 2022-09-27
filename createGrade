@@ -1,0 +1,17 @@
+{
+	"_id": {
+		"$oid": "633221c64adea872418fabf2"
+	},
+	"title":"Sistemas de Informacaos 2",
+	"description":"Bacharelado em sistemas de informacao do iff",
+	"period":"7",
+	"courseId":"633132d2f3f3e03babffadbd",
+	"subjetcs":[{
+		"id":"63319db6cdd04b577e01e75e",
+		"name":"Calculo2"
+	},
+	{
+		"id":"633222c1198a042e2911dc76",
+		"name":"Introducao a Progamacao"
+	}]
+}

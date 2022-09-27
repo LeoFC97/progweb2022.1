@@ -21,11 +21,9 @@ class SubjectMongoDBRepository implements SubjectRepository {
     throw new Error('Method not implemented.');
   }
   async create(subjectToBeCreated: CreateSubjectBodyData): Promise<Subject> {
-    console.log(subjectToBeCreated);
     const subjectCreated = await this.model.create({
       name: subjectToBeCreated.name,
     });
-    console.log(subjectCreated);
     return subjectCreated;
   }
 }

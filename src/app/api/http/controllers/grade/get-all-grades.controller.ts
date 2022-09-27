@@ -1,17 +1,24 @@
-import { injectable } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
+import { GetGradeByNameAndPeriodData } from '../../../../interfaces/entities/course/course';
 import Controller from '../../../../interfaces/http/controller';
-import { HttpResponse } from '../../../../interfaces/http/http';
-import GetAllCoursesUseCase from '../../../../use-cases/grade/get-all-grades.usecase';
+import { HttpRequest, HttpResponse } from '../../../../interfaces/http/http';
+import GetGradeByNameAndPeriodUseCaseInterface from '../../../../interfaces/use-cases/grade/create-grade.interface';
+import GetGradesValidator from '../../../../validators/grade/get-grade.validator';
 
 @injectable()
 class GetAllGradesController implements Controller {
   constructor(
-    private getAllCoursesUseCase: GetAllCoursesUseCase,
+    @inject('GetGradeByNameAndPeriodUseCase') private getGradeByNameAndPeriodUseCase: GetGradeByNameAndPeriodUseCaseInterface,
+    private getGradesValidator: GetGradesValidator,
   ) {}
-  async handle(): Promise<HttpResponse> {
-    const allCourses = await this.getAllCoursesUseCase.execute(); // TODO alterar aqui
+  async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
+    const { query } = httpRequest;
+    const queryValid = await this.getGradesValidator
+      .validate<GetGradeByNameAndPeriodData>(query);
+    const allGrades = await this
+      .getGradeByNameAndPeriodUseCase.execute(queryValid); // TODO alterar aqui
     return {
-      body: allCourses,
+      body: allGrades,
       status: 200,
     };
   }
