@@ -9,7 +9,7 @@ class GetAllGradesController implements Controller {
     private getAllCoursesUseCase: GetAllCoursesUseCase,
   ) {}
   async handle(): Promise<HttpResponse> {
-    const allCourses = await this.getAllCoursesUseCase.execute(); //TODO alterar aqui
+    const allCourses = await this.getAllCoursesUseCase.execute(); // TODO alterar aqui
     return {
       body: allCourses,
       status: 200,
